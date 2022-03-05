@@ -10,11 +10,11 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Reviews.belongsTo(models.Reviewers, {
+      Reviews.belongsTo(models.Reviewer, {
         foreignKey: 'reviewer_id',
         onDelete: 'CASCADE'
     });
-      Reviews.belongsTo(models.Restaurants, {
+      Reviews.belongsTo(models.Restaurant, {
       foreignKey: 'restaurant_id',
       onDelete: 'CASCADE'
   });
